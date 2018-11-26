@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar color="dark">
+          <ion-title>
+              <ion-icon name="map"></ion-icon> Mapa
+          </ion-title>
+      
+          <ion-buttons right>
+    
+              {{config.follow}}
+              <button #sync_button id="sync_button" ion-button icon-only large (click)="this.update()">
+                  <ion-icon name="sync"></ion-icon>
+                </button>
+          </ion-buttons>
+      </ion-navbar>
+    
+      <ion-toolbar>
+          <ion-searchbar [(ngModel)]="query" (ionInput)="searchPlace()" placeholder="Buscar"></ion-searchbar>
+      </ion-toolbar>
+    
+      <ion-list>
+          <ion-item *ngFor="let place of places" (click)="selectPlace(place)">{{place.description}}</ion-item>
+      </ion-list>
+    
+    </ion-header>
+    
+    <ion-content>
+    
+      <div #pleaseConnect id="please-connect">
+          <p>Por favor conectarse a Internet...</p>
+      </div>
+    
+      <div #map id="map">
+          <ion-spinner></ion-spinner>
+      </div>
+    
+    </ion-content>

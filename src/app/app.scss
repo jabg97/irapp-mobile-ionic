@@ -14,3 +14,39 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+ion-card-header {
+    background-color: color($colors, dark, base) !important;   
+  } 
+  ion-card-header > p{
+  font-size: 1.3rem !important;
+  color: color($colors, light, base) !important;
+  }
+
+ .gm-control-active,.gm-style-mtc ,.gm-style-mtc >div,.gm-svpc,.tab-button {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22) !important;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1) !important;
+  }   
+  
+  ion-card,ion-navbar,ion-header,form > button,.alert-wrapper,.loading-wrapper{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !important;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1) !important;
+  }   
+  ion-card:hover,ion-navbar:hover,ion-header:hover,form > button:hover,
+  .alert-wrapper:hover,.loading-wrapper:hover, .gm-control-active:hover,
+  .gm-style-mtc:hover,.gm-svpc:hover, ion-card:active,
+  ion-navbar:active,ion-header:active,form > button:active,.alert-wrapper:active,
+  .loading-wrapper:active, .gm-control-active:active,.gm-style-mtc:active,.gm-svpc:active,
+  .gm-style-mtc:focus,.gm-svpc:focus, ion-card:focus,ion-navbar:focus,
+  ion-header:focus,form > button:focus,.alert-wrapper:focus,.loading-wrapper:focus,
+  .gm-control-active:focus{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important;
+  }   
+
+  .tab-button:hover,.tab-button:hover > ion-icon,
+  .tab-button:active,.tab-button:active > ion-icon,
+  .tab-button:focus,.tab-button:focus > ion-icon{
+    color: color($colors, secondary, base) !important; 
+    font-weight: 500;  
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important; 
+  }
